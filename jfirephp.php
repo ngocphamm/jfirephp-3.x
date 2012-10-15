@@ -36,7 +36,6 @@ class plgSystemJFirePHP extends JPlugin
 	 *
 	 * Register FirePHP libraries and set options according to paramters
 	 *
-	 * @access	public
 	 * @return null
 	 */
 	public function onAfterInitialise()
@@ -67,7 +66,7 @@ class plgSystemJFirePHP extends JPlugin
 				$verbose = $this->params->get('verbose', 0);
 				if($verbose)
 				{
-					$firephp->group('JFirePHP Startup',array('Collapsed' => true,'Color' => '#FF4000'));
+					$firephp->group('JFirePHP Startup', array('Collapsed' => true,'Color' => '#FF4000'));
 					$firephp->log('JFirePHP enabled! - Verbose Output Mode: ON');
 				}
 
@@ -80,10 +79,10 @@ class plgSystemJFirePHP extends JPlugin
 
 				if ($verbose)
 				{
-					$firephp->log('JFirePHP: Options Set - maxObjectDepth:'.$options['maxObjectDepth'].
-														 ' maxArrayDepth:'.$options['maxArrayDepth'].
-														 ' useNativeJsonEncode:'.$options['useNativeJsonEncode'].
-														 ' includeLineNumbers:'.$options['includeLineNumbers']);
+					$firephp->log('JFirePHP: Options Set - maxObjectDepth:' . $options['maxObjectDepth']
+														. ' maxArrayDepth:' . $options['maxArrayDepth']
+														. ' useNativeJsonEncode:' . $options['useNativeJsonEncode']
+														. ' includeLineNumbers:' . $options['includeLineNumbers']);
 				}
 
 				$redirectphp = $this->params->get('redirectphp', 0);
@@ -95,7 +94,10 @@ class plgSystemJFirePHP extends JPlugin
 					$firephp->registerExceptionHandler();
 					$firephp->registerAssertionHandler(true, false);
 
-					if($verbose) $firephp->log('JFirePHP: E_WARNING, E_NOTICE, E_USER_ERROR, E_USER_WARNING, E_USER_NOTICE and E_RECOVERABLE_ERROR redirected.');
+					if($verbose)
+					{
+						$firephp->log('JFirePHP: E_WARNING, E_NOTICE, E_USER_ERROR, E_USER_WARNING, E_USER_NOTICE and E_RECOVERABLE_ERROR redirected.');
+					}
 				}
 
 				if ($verbose)
