@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system">
+	<name>JFirePHP</name>
+	<author>Ngoc Pham</author>
+	<creationDate>10/14/2012</creationDate>
+	<copyright>(c) 2012 Ngoc Pham. All rights reserved</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>tokanizar@gmail.com</authorEmail>
+	<authorUrl>www.ngocpham.info</authorUrl>
+	<version>1.0</version>
+	<description>JFirePHP
+	Joomla 3.0 system plugin to extend JError through FirePHP
+	Output Joomla Errors, Warnings and Notices to FireBug console when in debug mode.
+	For more information about FirePHP see: http://www.firephp.org/HQ/Use.html - FirePHP Headquarters.</description>
+
+	<languages></languages>
+	<files>
+                <filename plugin="jfirephp">jfirephp.php</filename>
+                <filename plugin="jfirephp">index.html</filename>
+                <filename plugin="jfirephp">LICENSE</filename>
+        	<filename plugin="jfirephp">README.txt</filename>
+        	<folder>firephpcore</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field  name="enable"
+                                        type="radio"
+                                        default="1"
+                                        label="Enable JFirePHP"
+                                        description="Enable Joomla integartion for FirePHPCore">
+					<option value="1">Yes</option>
+                                        <option value="0">No</option>
+				</field>
+
+				<field  name="verbose"
+                                        type="radio"
+                                        default="0"
+                                        label="Verbose Output"
+                                        description="Verbose detailed messages from JFirePHP">
+					<option value="1">Yes</option>
+                                        <option value="0">No</option>
+				</field>
+                                <field  name="redirectphp"
+                                        type="radio"
+                                        default="1"
+                                        label="Redirect PHP Errors, Warnings and Notices"
+                                        description="Redirect PHP Errors, Warnings and Notices to FirePHP console (Firebug and FirePHP inside of Firefox 3.x+ are required)">
+					<option value="1">Yes</option>
+                                        <option value="0">No</option>
+				</field>
+                                <field  name="limittodebug"
+                                        type="radio"
+                                        default="1"
+                                        label="Limit functionality to Joomla debug mode"
+                                        description="Limit functionality to Joomla debug mode. Only when Joomla debug is enabled, FirePHP will be engaged.">
+					<option value="1">Yes</option>
+                                        <option value="0">No</option>
+				</field>
+                                <field  name="maxObjectDepth"
+                                        type="text"
+                                        default="10"
+                                        label="maxObjectDepth"
+                                        description="FirePHP option: maxObjectDepth (default: 10)">
+				</field>
+                                <field  name="maxArrayDepth"
+                                        type="text"
+                                        default="20"
+                                        label="maxArrayDepth"
+                                        description="FirePHP option: maxArrayDepth (default: 20)">
+				</field>
+                                <field  name="useNativeJsonEncode"
+                                        type="radio"
+                                        default="1"
+                                        label="useNativeJsonEncode"
+                                        description="FirePHP option: useNativeJsonEncode (default: Yes)">
+					<option value="1">Yes</option>
+                                        <option value="0">No</option>
+				</field>
+                                <field  name="includeLineNumbers"
+                                        type="radio"
+                                        default="1"
+                                        label="includeLineNumbers"
+                                        description="FirePHP option: includeLineNumbers (default: Yes)">
+					<option value="1">Yes</option>
+                                        <option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
