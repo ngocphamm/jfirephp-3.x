@@ -13,17 +13,6 @@ The 3.0 version is still based on 1.5 version but strips out some redundants, fo
 
 Simply install the system plugin via the Joomla Extension Manager and make sure it is published. If you want to use the plugin without jumping to Joomla Debug mode, please also set the option "Limit functionality to Joomla debug mode" to "No".
 
-<!--IMPORTANT
-============
-
-Add the firephp/firephp.defines.php to your project. You can either copy the content into 
-your code (e.g. a global defines file) or copy the file into your project. Make sure it is 
-included in your distribution. It ensures that all the FirePHP calls can stay in your code
-without creating errors on systems without FirePHP.
-Make sure you use the fb() or FB::* syntax on all FirePHP calls you place into your code.
-DO NOT include any FirePHP files and classes directly. All of that is performed for you
-as part of JFirePHP.-->
-
 USAGE
 ============
 
