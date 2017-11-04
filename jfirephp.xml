@@ -7,7 +7,7 @@
     <license>New BSD License</license>
     <authorEmail>tokanizar@gmail.com</authorEmail>
     <authorUrl>www.ngocpham.info</authorUrl>
-    <version>1.1</version>
+    <version>1.2</version>
     <description>JFirePHP
         Joomla 3.0 system plugin to extend JError through FirePHP
         Output Joomla Errors, Warnings and Notices to FireBug console when in debug mode.
