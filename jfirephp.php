@@ -40,7 +40,7 @@ class plgSystemJFirePHP extends JPlugin
 	 */
 	public function onAfterInitialise()
 	{
-		require_once JPATH_PLUGINS.DS.'system'.DS.'jfirephp'.DS.'FirePHPCore'.DS.'fb.php';
+		require_once JPATH_PLUGINS.DS.'system'.DS.'jfirephp'.DS.'firephpcore'.DS.'fb.php';
 
 		// JFirePHP is installed and loaed
 		define('JFIREPHP', 1);
